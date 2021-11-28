@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puhelinnumero</title>
+    <style>
+        .h{
+            font-size: 60px;
+            color: darkblue;
+        }
+        .nums{
+            background-color: darkblue;
+            border-radius: 30px;
+            width: 1000px;
+            height: 150px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .num{
+            font-size: 25px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .actions{
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+        }
+        button{
+            background-color: lightpink;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="h">Puhelinnumero:</div>
+    <div class="nums">
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+        <div class="num">
+            <div>0</div>
+            <div class="actions">
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+                </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    document.addEventListener('click', (e) => {
+        if (e.target){
+            if (e.target.classList.contains('plus')){
+                let number = e.target.parentElement.parentElement.firstElementChild
+                let num = Number(number.textContent)
+                if (num < 9){
+                    number.innerHTML = (++num).toString()
+                }
+            }
+            if (e.target.classList.contains('minus')){
+                let number = e.target.parentElement.parentElement.firstElementChild
+                let num = Number(number.textContent)
+                if (num > 0){
+                    number.innerHTML = (--num).toString()
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
